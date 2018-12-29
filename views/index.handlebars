@@ -9,8 +9,8 @@
         {{#each burgers}}
             {{#unless eaten}}
             <li>
-                {{name}}
-                <button class="" data-id="{{id}}" data-eaten="{{false}}">
+                {{burger_name}}
+                <button class="" data-id="{{id}}" data-eaten="false">
                     Devour!
                 </button>
             </li>
@@ -21,7 +21,7 @@
         {{#each burgers}}
             {{#if eaten}}
             <li>
-                {{name}}
+                {{burger_name}}
                 <button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
             </li>
             {{/if}}
