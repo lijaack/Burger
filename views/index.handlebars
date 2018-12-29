@@ -5,27 +5,29 @@
 <h2>Type in a burger that you would like to eat</h2>
 
 <div class="container">
-    <div class="col-6">
-        {{#each burgers}}
-            {{#unless eaten}}
-            <li>
-                {{burger_name}}
-                <button class="" data-id="{{id}}" data-eaten="false">
-                    Devour!
-                </button>
-            </li>
-            {{/unless}}
-        {{/each}}
-    </div>
-    <div class="col-6">
-        {{#each burgers}}
-            {{#if eaten}}
-            <li>
-                {{burger_name}}
-                <button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
-            </li>
-            {{/if}}
-        {{/each}}
+    <div class="row">
+        <div class="col-6">
+            {{#each burgers}}
+                {{#unless devoured}}
+                <li>
+                    {{burger_name}}
+                    <button class="" data-id="{{id}}" data-eaten="false">
+                        Devour!
+                    </button>
+                </li>
+                {{/unless}}
+            {{/each}}
+        </div>
+        <div class="col-6">
+            {{#each burgers}}
+                {{#if devoured}}
+                <li>
+                    {{burger_name}}
+                    <button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
+                </li>
+                {{/if}}
+            {{/each}}
+        </div>
     </div>
 </div>
 
