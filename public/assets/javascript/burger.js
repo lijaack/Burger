@@ -2,7 +2,6 @@ $(document).ready(function() {
 
     $(".create-burger").on("submit", function(event) {
         event.preventDefault();
-        console.log("created new burger");
 
         var newBurger = {
           name: $("#burger").val().trim(),
@@ -35,7 +34,21 @@ $(document).ready(function() {
       )
     })
 
+    $(".delete-burger").on("click", function(event){
+      event.preventDefault();
+      
+      console.log("deleting");
 
+      var burgerID = $(this).data("id");
+
+      $.ajax("/api/burgers/" + burgerID, {
+        type: "DELETE"
+      }).then(
+        function(){
+          location.reload();
+        }
+      )
+    })
 
 
 });
