@@ -1,0 +1,12 @@
+html {
+    min-height: 100%;
+}
+
+body {
+    background-image: linear-gradient(to right top, #371405, #693415, #9a5b19, #c68918, #ebbc12);
+}
+
+.min-height-100 {
+    min-height: 100px;
+    padding: 20px;
+}

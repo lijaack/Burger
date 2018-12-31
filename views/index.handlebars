@@ -1,30 +1,30 @@
-<h1 class="text-center">Eataburger</h1>
+<h1 class="text-center">Eat-a-burger</h1>
 
 <h2 class="text-center">Make a burger and devour it!</h2>
 
 <h2 class="text-center">Type in a burger that you would like to eat</h2>
-
-<div class="container">
+<hr>
+<div class="container min-height-100">
     <div class="row">
-        <div class="col-6">
+        <div class="col-6 text-center">
             {{#each burgers}}
                 {{#unless devoured}}
-                <p>
+                <h5>
                     {{burger_name}}
-                    <button class="devour-burger" data-id="{{id}}" data-devoured="false">
+                    <button class="devour-burger btn btn-success" data-id="{{id}}" data-devoured="false">
                         Devour!
                     </button>
-                </p>
+                </h5>
                 {{/unless}}
             {{/each}}
         </div>
-        <div class="col-6">
+        <div class="col-6 text-center">
             {{#each burgers}}
                 {{#if devoured}}
-                <p>
+                <h5>
                     {{burger_name}}
-                    <button class="delete-burger" data-id="{{id}}">DELETE!</button>
-                </p>
+                    <button class="delete-burger btn btn-danger" data-id="{{id}}">DELETE!</button>
+                </h5>
                 {{/if}}
             {{/each}}
         </div>
