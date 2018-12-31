@@ -1,40 +1,40 @@
-<h1>Eataburger</h1>
+<h1 class="text-center">Eataburger</h1>
 
-<h2>Make a burger and devour it!</h2>
+<h2 class="text-center">Make a burger and devour it!</h2>
 
-<h2>Type in a burger that you would like to eat</h2>
+<h2 class="text-center">Type in a burger that you would like to eat</h2>
 
 <div class="container">
     <div class="row">
         <div class="col-6">
             {{#each burgers}}
                 {{#unless devoured}}
-                <li>
+                <p>
                     {{burger_name}}
                     <button class="devour-burger" data-id="{{id}}" data-devoured="false">
                         Devour!
                     </button>
-                </li>
+                </p>
                 {{/unless}}
             {{/each}}
         </div>
         <div class="col-6">
             {{#each burgers}}
                 {{#if devoured}}
-                <li>
+                <p>
                     {{burger_name}}
                     <button class="delete-burger" data-id="{{id}}">DELETE!</button>
-                </li>
+                </p>
                 {{/if}}
             {{/each}}
         </div>
     </div>
 </div>
 
-<form class="create-burger">
+<form class="create-burger text-center">
   <div class="form-group">
-    <label for="burger">burger:</label>
+    <label for="burger"><h3>Burger:</h3></label>
     <input type="text" id="burger" name="name">
   </div>
-  <button type="submit">Make burger</button>
+  <button class="btn btn-primary" type="submit">Make burger</button>
 </form>
