@@ -29,8 +29,15 @@ var orm = {
         });
     },
 
-    updateOne: function(){
-
+    updateOne: function(table, id, cb){
+        var queryString = "UPDATE " + table + " SET devoured = 1 WHERE " + id;
+        console.log(queryString);
+        connection.query(queryString, function(err, result) {
+            if (err) {
+              throw err;
+            }
+            cb(result);
+        });
     }
 };
 

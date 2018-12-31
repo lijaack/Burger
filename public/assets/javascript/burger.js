@@ -21,6 +21,19 @@ $(document).ready(function() {
         );
     });
     
+    $(".devour-burger").on("click", function(event){
+      event.preventDefault();
+      console.log("devouring");
+      var burgerID = $(this).data("id");
+
+      $.ajax("/api/burgers/" + burgerID, {
+        type: "PUT"
+      }).then(
+        function(){
+          location.reload();
+        }
+      )
+    })
 
 
 
