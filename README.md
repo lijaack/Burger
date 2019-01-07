@@ -13,5 +13,4 @@ An app I created to practice express-handlebars. Simply type in a burger you wou
 * handlebars.js
 * MYSQL
 
-![picture](.png)
-![picture](.png)
+![burger-gif](burger-gif.gif)
